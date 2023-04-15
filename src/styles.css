@@ -1,0 +1,137 @@
+body {
+	margin: 0;
+	color: grey;
+	height: 100%;
+	font-family: 'inter';
+	font-size: 0.9rem;
+	background-color: #000;
+}
+
+.btn-box {
+	display: flex;
+	height: 30px;
+	align-items: center;
+	gap: 4px;
+	padding-left: 5px;
+}
+
+.btn-box > button {
+	border: none;
+	background-color: transparent;
+	padding: 3px 10px;
+	font-family: 'inter';
+	color: var(--color-fg);
+	background-color: #8882;
+	border-radius: 3px;
+}
+
+.btn-box > button:hover {
+	background-color: #8884;
+}
+
+span.title {
+	height: 30px;
+	display: grid;
+	place-items: center;
+	user-select: none;
+	pointer-events: none;
+	color: #fffa;
+}
+
+.titlebar {
+	--color-bg: #1e1e1e;
+	--color-fg: #fffc;
+	height: 30px;
+	background: var(--color-bg);
+	user-select: none;
+	display: flex;
+	justify-content: space-between;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+.titlebar.light {
+	--color-bg: #fff;
+	--color-fg: #000;
+}
+
+.titlebar.light span {
+	color: var(--color-fg);
+}
+
+.titlebar.dark img {
+	filter: invert();
+}
+
+.titlebar-button {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: 47px;
+	height: 30px;
+	transition: 200ms;
+}
+
+.titlebar-button > span {
+	flex: 1;
+}
+
+.titlebar-button:hover {
+	background: #fff1;
+}
+
+.container {
+	margin-top: 30px;
+	overflow: hidden;
+}
+
+#titlebar-minimize,
+#titlebar-maximize,
+#titlebar-close {
+	position: relative;
+}
+
+#titlebar-close:hover {
+	background-color: rgb(194, 27, 27);
+}
+
+#titlebar-minimize::after,
+#titlebar-maximize::after,
+#titlebar-close::after,
+#titlebar-close::before {
+	content: '';
+	position: absolute;
+	background-color: var(--color-fg);
+}
+
+#titlebar-close:hover::after,
+#titlebar-close:hover::before {
+	background-color: #fff;
+}
+#titlebar-minimize::after {
+	height: 1px;
+	width: 10px;
+}
+
+#titlebar-maximize::after {
+	height: 8px;
+	width: 8px;
+	border: 1px solid var(--color-fg);
+	background-color: transparent;
+}
+
+#titlebar-close::after,
+#titlebar-close::before {
+	height: 1px;
+	width: 12px;
+}
+
+#titlebar-close::after {
+	rotate: 45deg;
+}
+
+#titlebar-close::before {
+	rotate: -45deg;
+}
