@@ -18,7 +18,7 @@ very minimal, single file code editor inpired from vscode.
 clone the project:
 
 ```
-$ git clone git@github.com:anaysharma/editiny.git
+$ git clone https://github.com/anaysharma/editiny.git
 ```
 
 navigate into the project:
